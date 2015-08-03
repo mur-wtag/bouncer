@@ -1,0 +1,21 @@
+<head>
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+</head>
+<title>Bouncer</title>
+<div style="text-align: center">
+  <iframe src="//giphy.com/embed/GVoq2dMlEdxao" width="480" height="288" frameBorder="0" style="max-width: 100%" class="giphy-embed" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+  <h2>Actually I'm Waiting for a REQUEST from BLIZZARD</h2>
+  <div id='messagesDiv'></div>
+</div>
+<script>
+  var myDataRef = new Firebase('https://bouncer36.firebaseio.com/bouncer36');
+  myDataRef.on('child_added', function(snapshot) {
+    var message = snapshot.val();
+    displayChatMessage(message.name, message.text);
+  });
+  function displayChatMessage(name, text) {
+    $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
+    $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+  };
+</script>
