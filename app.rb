@@ -50,7 +50,7 @@ post '/voucher_eligible' do
   }
   # obj = PostRequest.new(URL, @request_payload, 'blizzard', '123123123').submit
   # puts obj
-  RestClient.post URL, body, { :Authorization => 'blizzard 123123123' }
+  # RestClient.post URL, body, { :Authorization => 'blizzard 123123123' }
 end
 
 helpers do

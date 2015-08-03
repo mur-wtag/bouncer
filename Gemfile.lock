@@ -37,3 +37,6 @@ DEPENDENCIES
   rake
   rest-client
   sinatra
+
+BUNDLED WITH
+   1.10.4
