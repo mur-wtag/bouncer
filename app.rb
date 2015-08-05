@@ -33,7 +33,9 @@ end
 
 post '/voucher_eligible' do
   authorize!
-  puts @request_payload
+  params = JSON.parse @request_payload.strip.gsub(/\s+/, ' ')
+  puts params
+
   base_uri = 'https://bouncer36.firebaseio.com/'
   puts base_uri
   firebase = Firebase::Client.new(base_uri)
@@ -42,11 +44,11 @@ post '/voucher_eligible' do
   content_type :json
   # Sending
   {
-    customer_id: 1,
-    company_id: 1,
-    amount: 200.25,
-    currency: 'USD',
-    number: 'XJiX 12-NV',
+    customer_id: params['customer_id'],
+    company_id: params['company_id'],
+    amount: params['amount'],
+    currency: params['currency'],
+    number:  8.times.map { [*'0'..'9', *'a'..'z'].sample }.join,
     status: 'generated'
   }.to_json
 end
