@@ -4,10 +4,10 @@ A tiny sinatra post request consuming tool.
 It's nothing just consumes a request with:
 ```json
 {
-  "customer_id": <customer_id>,
-  "company_id": <company_id>,
-  "amount": <amount>,
-  "currency": <currency>
+  "customer_id": "<customer_id>",
+  "company_id": "<company_id>",
+  "amount": "<amount>",
+  "currency": "<currency>"
 }
 ```
 
@@ -15,13 +15,13 @@ and responses:
 
 ```json
 {
-  "id": <id>,
-  "customer_id": <customer_id>,
-  "company_id": <company_id>,
-  "amount": <amount>,
-  "currency": <currency>,
-  "number": <number>,
-  "status": <status>
+  "id": "<id>",
+  "customer_id": "<customer_id>",
+  "company_id": "<company_id>",
+  "amount": "<amount>",
+  "currency": "<currency>",
+  "number": "<number>",
+  "status": "<status>"
 }
 ```
 
