@@ -26,23 +26,24 @@ and responses:
 ```
 
 :p :p :p
-### installation
+### Installation
 
 clone the repo: `git@github.com:mur-wtag/bouncer.git`
 
 install gems: `bundle` (if bundler not available: `gem install bundler`)
 
-### usage
+### Usage
 You can run the app with `ruby app.rb`, and open [http://localhost:4567](http://localhost:4567) to see the interface.
 
-### need to know
+### Need to know
 **Basic Authentication Credentials**
 
-username = 'bounce'
+- username = 'bounce'
 
-password = 'pass'
+- password = 'pass'
 
 **Available URLs**
+
 1. `GET /`
 
 2. `GET /ping`
