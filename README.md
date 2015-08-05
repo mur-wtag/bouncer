@@ -39,11 +39,14 @@ You can run the app with `ruby app.rb`, and open [http://localhost:4567](http://
 **Basic Authentication Credentials**
 
 username = 'bounce'
+
 password = 'pass'
 
 **Available URLs**
 1. `GET /`
+
 2. `GET /ping`
+
 3. `POST /voucher_eligible`
 
 
