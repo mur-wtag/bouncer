@@ -37,20 +37,18 @@ post '/voucher_eligible' do
   base_uri = 'https://bouncer36.firebaseio.com/'
   puts base_uri
   firebase = Firebase::Client.new(base_uri)
-  firebase.push('bouncer36', {name: 'requested_at', text: "#{Time.now}"})
+  firebase.push('bouncer36', {name: 'requested_at', text: "#{Time.now}", ip: request.ip })
 
+  content_type :json
   # Sending
-  body = {
+  {
     customer_id: 1,
     company_id: 1,
     amount: 200.25,
     currency: 'USD',
     number: 'XJiX 12-NV',
     status: 'generated'
-  }
-  # obj = PostRequest.new(URL, @request_payload, 'blizzard', '123123123').submit
-  # puts obj
-  # RestClient.post URL, body, { :Authorization => 'blizzard 123123123' }
+  }.to_json
 end
 
 helpers do
